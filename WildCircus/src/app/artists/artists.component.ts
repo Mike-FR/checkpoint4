@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { slideInAnimation } from '../animation';
 import { DbWildCircusService } from '../db-wild-circus.service';
 import { Artist } from '../models/artists.model';
+import { AlertComponent } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-artists',
@@ -14,7 +15,24 @@ import { Artist } from '../models/artists.model';
 })
 export class ArtistsComponent implements OnInit {
 
+  isCollapsed = {};
   artistsData: Artist[];
+  max = 5;
+  isReadonly = false;
+
+  alerts: any[] = [{ }];
+
+  add(): void {
+    this.alerts.push({
+      type: 'info',
+      msg: `(${new Date().toLocaleTimeString()}) Merci ! Votre vote a bien été enregistré.`,
+      timeout: 4000
+    });
+  }
+
+  onClosed(dismissedAlert: AlertComponent): void {
+    this.alerts = this.alerts.filter(alert => alert !== dismissedAlert);
+  }
 
   constructor(private dataService: DbWildCircusService) { }
 

@@ -1,13 +1,30 @@
-<div class="container">
+<h1 class="text-uppercase mt-5 text-center">Nos artistes</h1>
+
+<div class="container my-5">
     <div class="card-deck">
-        <ng-container *ngFor="let card of artistsData">
-            <div class="card">
+        <ng-container *ngFor="let card of artistsData; let i = index">
+            <div class="card text-center">
                 <img src={{card.image}} class="card-img-top" alt={{card.name}}>
                 <div class="card-body">
                     <h5 class="card-title">{{card.name}}</h5>
-                    <p class="card-text">{{card.description}}</p>
+                    <div class="my-3">
+                        <rating [(ngModel)]="card.evaluation" [max]="max" [readonly]="isReadonly"
+                            (onHover)="hoveringOver($event)" (onLeave)="resetStar()" (click)="add()" [titles]="['one','two','three']">
+                        </rating>
+                    </div>
+                    <button type="button" class="btn btn-danger" (click)="isCollapsed[i] = !isCollapsed[i]"
+                        [attr.aria-expanded]="!isCollapsed[i]" [attr.aria-controls]="'collapseBasic' + i">Découvrir
+                    </button>
+                    <div class="card-text mt-4" [id]="'collapseBasic' + i" [collapse]="!isCollapsed[i]"
+                        [isAnimated]="true">
+                        {{card.description}}
+                    </div>
                 </div>
             </div>
         </ng-container>
     </div>
+</div>
+
+<div class="text-center" *ngFor="let alert of alerts">
+    <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="onClosed(alert)">{{ alert.msg }}</alert>
 </div>

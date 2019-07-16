@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AlertModule} from 'ngx-bootstrap';  
+import { AlertModule, CollapseModule, RatingModule} from 'ngx-bootstrap';  
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +12,7 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DbWildCircusService } from './db-wild-circus.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AlertModule.forRoot()
+    FormsModule,
+    AlertModule.forRoot(),
+    CollapseModule.forRoot(),
+    RatingModule.forRoot()
   ],
   providers: [DbWildCircusService],
   bootstrap: [AppComponent]
