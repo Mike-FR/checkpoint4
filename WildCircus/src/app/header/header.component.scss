@@ -20,7 +20,6 @@ h6 {
   width: 4.5em;
 }
 
-
 .navbar-nav .nav-item .nav-link {
   padding: 1.1em 1em !important;
   font-size: 120%;
@@ -44,6 +43,7 @@ nav {
   -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
   transition: padding-top 0.3s, padding-bottom 0.3s;
   border: none;
+  background-color: rgba(45, 50, 70, 0.55);
 }
 
 .shrink {
@@ -51,6 +51,7 @@ nav {
   padding-bottom: 0;
   background-color: #212529;
 }
+
 .banner {
   background-image: url("https://bdn-data.s3.amazonaws.com/blogs.dir/40/files/2012/04/Circus_Dreams_Jacob_Bloom_Nate_Stein_Sharpe_and_Eric_Allen_CREDIT_Harry_Powers.jpg");
   text-align: center;
@@ -64,6 +65,7 @@ nav {
   -o-background-size: cover;
   background-size: cover;
 }
+
 .banner-text {
   padding: 200px 0 150px 0;
 }
