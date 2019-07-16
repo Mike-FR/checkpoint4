@@ -16,20 +16,10 @@ h6 {
   color: #323233;
   text-transform: uppercase;
 }
-.navbar-brand span {
-  color: #fed136;
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+.navbar-brand img {
+  width: 4.5em;
 }
-.navbar-brand {
-  color: #fff;
-  font-size: 25px;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
+
 
 .navbar-nav .nav-item .nav-link {
   padding: 1.1em 1em !important;
@@ -62,7 +52,7 @@ nav {
   background-color: #212529;
 }
 .banner {
-  background-image: url("http://www.hd-freewallpapers.com/latest-wallpapers/abstract-website-backgrounds.jpg");
+  background-image: url("https://bdn-data.s3.amazonaws.com/blogs.dir/40/files/2012/04/Circus_Dreams_Jacob_Bloom_Nate_Stein_Sharpe_and_Eric_Allen_CREDIT_Harry_Powers.jpg");
   text-align: center;
   color: #fff;
 
@@ -83,7 +73,8 @@ nav {
   font-weight: 700;
   line-height: 100px;
   margin-bottom: 30px;
-  color: #fff;
+  color: #d60f0d;
+  text-shadow: 3px 10px 10px black;
 }
 .banner-sub-heading {
   font-family: "Libre Baskerville", serif;
@@ -92,6 +83,7 @@ nav {
   line-height: 30px;
   margin-bottom: 50px;
   color: #fff;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 .btn-banner {
