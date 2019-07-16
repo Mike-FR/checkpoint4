@@ -15,8 +15,8 @@ import { AlertComponent } from 'ngx-bootstrap';
 })
 export class ArtistsComponent implements OnInit {
 
-  isCollapsed = {};
   artistsData: Artist[];
+  isCollapsed = {};
   max = 5;
   isReadonly = false;
 

@@ -76,7 +76,7 @@ nav {
   line-height: 100px;
   margin-bottom: 30px;
   color: #d60f0d;
-  text-shadow: 3px 10px 10px black;
+  text-shadow: 0px 3px 1px whitesmoke;
 }
 .banner-sub-heading {
   font-family: "Libre Baskerville", serif;
@@ -102,6 +102,10 @@ nav {
   margin: auto;
   text-align: center;
   padding-top: 30px;
+}
+
+.logo-banner {
+  width: 39vh;
 }
 
 /* mobile view */
@@ -130,7 +134,7 @@ nav {
     font-size: 10px;
     font-weight: 200;
     line-height: 10px;
-    margin-bottom: 40px;
+    margin: 0;
   }
 }
 
