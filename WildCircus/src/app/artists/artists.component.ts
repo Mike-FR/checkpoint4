@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { slideInAnimation } from '../animation';
+import { DbWildCircusService } from '../db-wild-circus.service';
+import { Artist } from '../models/artists.model';
 
 @Component({
   selector: 'app-artists',
@@ -12,9 +14,15 @@ import { slideInAnimation } from '../animation';
 })
 export class ArtistsComponent implements OnInit {
 
-  constructor() { }
+  artistsData: Artist[];
+
+  constructor(private dataService: DbWildCircusService) { }
 
   ngOnInit() {
+    this.dataService.getArtists().subscribe(artist => {
+      this.artistsData = artist;
+      console.log(this.artistsData);
+    });
   }
 
 }

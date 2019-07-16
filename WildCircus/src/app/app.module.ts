@@ -10,6 +10,8 @@ import { ArtistsComponent } from './artists/artists.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DbWildCircusService } from './db-wild-circus.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [DbWildCircusService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
