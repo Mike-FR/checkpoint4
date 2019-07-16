@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AlertModule} from 'ngx-bootstrap';  
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +9,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,11 +19,12 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
     HomepageComponent,
     ArtistsComponent,
     ReservationComponent,
-    AdminpageComponent
+    AdminpageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     AlertModule.forRoot()
   ],
   providers: [],
