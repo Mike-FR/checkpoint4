@@ -24,7 +24,7 @@ export class ArtistsComponent implements OnInit {
 
   add(): void {
     this.alerts.push({
-      type: 'info',
+      type: 'warning',
       msg: `(${new Date().toLocaleTimeString()}) Merci ! Votre vote a bien été enregistré.`,
       timeout: 4000
     });
