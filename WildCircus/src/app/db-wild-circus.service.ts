@@ -26,8 +26,8 @@ export class DbWildCircusService {
     return this.http.post(`${this.url}/clients`, postData).toPromise().then(data => console.log(data));
   }
 
-  deleteReservation() {
-    // return this.http.delete(`${this.url}/reservations`)
+  deleteReservation(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/admin/${id}`);
   }
 
 }

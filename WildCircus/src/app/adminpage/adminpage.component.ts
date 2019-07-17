@@ -20,8 +20,17 @@ export class AdminpageComponent implements OnInit {
     });
   }
 
-  remove() {
 
+  remove(delID: number) {
+    this.dataService.deleteReservation(delID).subscribe(() => console.log(`Réservation ${delID} annulée`),
+      (err) => console.log(err)
+    );
+    for (let i = 0; i < this.reservationData.length; i++) {
+      if (this.reservationData[i].id === delID) {
+        this.reservationData.splice(i, 1);
+        break;
+      }
+    }
   }
 
 }
