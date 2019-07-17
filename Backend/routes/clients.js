@@ -18,16 +18,4 @@ router.get('/', function (req, res, next) {
 });
 
 
-router.post('/', function (req, res, next) {
-  const dataToInsert = req.body
-  connection.query('INSERT INTO artistes SET ?', dataToInsert, (err, results) => {
-      if (err) {
-          console.log(err);
-          res.status(500).send("Erreur lors de la création d'un artiste");
-      } else {
-          res.json(results);
-      }
-  });
-});
-
 module.exports = router;

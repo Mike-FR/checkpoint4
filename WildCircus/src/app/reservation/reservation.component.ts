@@ -29,8 +29,4 @@ export class ReservationComponent implements OnInit {
 
   }
 
-  bookArtist(data) {
-
-  }
-
 }

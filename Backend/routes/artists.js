@@ -14,6 +14,8 @@ router.get('/', function (req, res, next) {
   })
 });
 
+
+/* POST an artists to database */
 router.post('/', function (req, res, next) {
   const dataToInsert = req.body
   connection.query('INSERT INTO artistes SET ?', dataToInsert, (err, results) => {
