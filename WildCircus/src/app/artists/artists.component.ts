@@ -22,7 +22,7 @@ export class ArtistsComponent implements OnInit {
 
   alerts: any[] = [{ }];
 
-  
+
   constructor(private dataService: DbWildCircusService) { }
 
   ngOnInit() {

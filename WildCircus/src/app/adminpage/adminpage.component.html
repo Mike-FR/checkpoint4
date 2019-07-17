@@ -1,23 +1,23 @@
-<h1 class="text-uppercase text-center ">Liste des Réservations</h1>
+<h1 class="text-uppercase text-center my-5">Liste des Réservations</h1>
 
 <div class="container my-5">
     <table class="table">
         <thead class="thead-dark">
             <tr>
+                <th scope="col">Date</th>
                 <th scope="col">Artistes</th>
                 <th scope="col">Client</th>
                 <th scope="col">Email client</th>
                 <th scope="col">Nombre de personne</th>
-                <th scope="col">Date</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of reservationData">
-                <td>{{item.name}} </td>
-                <td>{{item.nom_client}} </td>
-                <td>{{item.email_client}}</td>
-                <td>{{item.nb_client}}</td>
                 <td>{{item.date}}</td>
+                <td>{{item.artistes}} </td>
+                <td>{{item.nom}} </td>
+                <td>{{item.email}}</td>
+                <td>{{item.nombre}}</td>
                 <td><button type="button" (click)="remove()" class="btn btn-danger">Annuler</button></td>
             </tr>
         </tbody>

@@ -1,7 +1,6 @@
 export class Reservation {
-    constructor(public emailClient: string,
-                public nameClient: string,
+    constructor(public email: string,
+                public nom: string,
                 public nb: number,
-                public date: string,
                 public id?: number) { }
 }

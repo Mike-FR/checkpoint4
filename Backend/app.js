@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 
 const indexRouter = require('./routes/index');
 const artistsRouter = require('./routes/artists');
-const reservationRouter = require('./routes/reservations');
+const clientsRouter = require('./routes/clients');
 const adminRouter = require('./routes/admin');
 
 
@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/artists', artistsRouter);
-app.use('/reservations', reservationRouter);
+app.use('/clients', clientsRouter);
 app.use('/admin', adminRouter);
 
 

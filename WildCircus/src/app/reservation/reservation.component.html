@@ -13,19 +13,14 @@
         </thead>
         <tbody>
             <tr *ngFor="let item of artistsData">
-                <td>{{item.name}} </td>
-                <td><input type="text" [(ngModel)]="postData.nameClient"></td>
-                <td><input type="email" [(ngModel)]="postData.emailClient" name="email" id="email"></td>
-                <td><input type="number" [(ngModel)]="postData.nb" name="nb" id="nb"></td>
-                <td><input type="text" [(ngModel)]="postData.date" placeholder="Date" class="form-control" bsDatepicker
+                <td>{{item.nom}} </td>
+                <td><input type="text" name="client" id="client"></td>
+                <td><input type="email"  name="email" id="email"></td>
+                <td><input type="number" name="nb" id="nb"></td>
+                <td><input type="text"  name="date" id="date" placeholder="Date" class="form-control" bsDatepicker
                         [bsConfig]="{ isAnimated: true, containerClass: 'theme-red'}"></td>
                 <td><button type="button" (click)="bookArtist()" class="btn btn-danger">Réserver</button></td>
             </tr>
         </tbody>
     </table>
 </div>
-
-<p>{{postData.emailClient}}</p>
-<p>{{postData.nameClient}}</p>
-<p>{{postData.nb}}</p>
-<p>{{postData.date}}</p>

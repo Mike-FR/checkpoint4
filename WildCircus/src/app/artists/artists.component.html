@@ -6,10 +6,9 @@
             <div class="card text-center">
                 <img src={{card.image}} class="card-img-top" alt={{card.name}}>
                 <div class="card-body">
-                    <h5 class="card-title">{{card.name}}</h5>
+                    <h5 class="card-title">{{card.nom}}</h5>
                     <div class="my-3">
-                        <rating [(ngModel)]="card.evaluation" [max]="max" [readonly]="isReadonly"
-                            (onLeave)="resetStar()" (click)="add(card.evaluation)">
+                        <rating [(ngModel)]="card.evaluation" [max]="max" [readonly]="isReadonly" (click)="add(card.evaluation)">
                         </rating>
                     </div>
                     <button type="button" class="btn btn-danger" (click)="isCollapsed[i] = !isCollapsed[i]"

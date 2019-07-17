@@ -14,7 +14,7 @@ export class AdminpageComponent implements OnInit {
   constructor(private dataService: DbWildCircusService) { }
 
   ngOnInit() {
-    this.dataService.getReservation().subscribe(reservation => {
+    this.dataService.getClients().subscribe(reservation => {
       this.reservationData = reservation;
       console.log(this.reservationData);
     });
