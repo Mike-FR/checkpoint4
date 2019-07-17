@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Reservation } from '../models/reservation.model';
+import { DbWildCircusService } from '../db-wild-circus.service';
 
 @Component({
   selector: 'app-adminpage',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminpageComponent implements OnInit {
 
-  constructor() { }
+  reservationData: Reservation[];
+
+  constructor(private dataService: DbWildCircusService) { }
 
   ngOnInit() {
+    this.dataService.getReservation().subscribe(reservation => {
+      this.reservationData = reservation;
+      console.log(this.reservationData);
+    });
+  }
+
+  remove() {
+
   }
 
 }

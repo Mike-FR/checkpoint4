@@ -22,18 +22,7 @@ export class ArtistsComponent implements OnInit {
 
   alerts: any[] = [{ }];
 
-  add(): void {
-    this.alerts.push({
-      type: 'warning',
-      msg: `(${new Date().toLocaleTimeString()}) Merci ! Votre vote a bien été enregistré.`,
-      timeout: 4000
-    });
-  }
-
-  onClosed(dismissedAlert: AlertComponent): void {
-    this.alerts = this.alerts.filter(alert => alert !== dismissedAlert);
-  }
-
+  
   constructor(private dataService: DbWildCircusService) { }
 
   ngOnInit() {
@@ -41,6 +30,19 @@ export class ArtistsComponent implements OnInit {
       this.artistsData = artist;
       console.log(this.artistsData);
     });
+  }
+
+  add(note): void {
+    this.alerts.push({
+      type: 'warning',
+      msg: `(${new Date().toLocaleTimeString()}) Merci ! Votre vote a bien été enregistré.`,
+      timeout: 4000
+    });
+
+  }
+
+  onClosed(dismissedAlert: AlertComponent): void {
+    this.alerts = this.alerts.filter(alert => alert !== dismissedAlert);
   }
 
 }

@@ -3,6 +3,7 @@ import { slideInAnimation } from '../animation';
 import { DbWildCircusService } from '../db-wild-circus.service';
 import { Reservation } from '../models/reservation.model';
 import { Artist } from '../models/artists.model';
+import { datepickerAnimation } from 'ngx-bootstrap/datepicker/datepicker-animations';
 
 @Component({
   selector: 'app-reservation',
@@ -18,6 +19,10 @@ export class ReservationComponent implements OnInit {
   reservationData: Reservation[];
   artistsData: Artist[];
 
+  date = new Date('2019-07-19 00:00:01');
+  dateFormat = this.date.getDate();
+
+  postData = new Reservation('', '', null, '' );
 
   constructor(private dataService: DbWildCircusService) { }
 
@@ -31,6 +36,13 @@ export class ReservationComponent implements OnInit {
       this.artistsData = artist;
       console.log(this.artistsData);
     });
+
+
+
+  }
+
+  bookArtist(data) {
+
   }
 
 }

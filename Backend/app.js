@@ -20,6 +20,8 @@ app.use(bodyParser.urlencoded({
 const indexRouter = require('./routes/index');
 const artistsRouter = require('./routes/artists');
 const reservationRouter = require('./routes/reservations');
+const adminRouter = require('./routes/admin');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/artists', artistsRouter);
 app.use('/reservations', reservationRouter);
+app.use('/admin', adminRouter);
 
 
 // catch 404 and forward to error handler

@@ -9,7 +9,7 @@
                     <h5 class="card-title">{{card.name}}</h5>
                     <div class="my-3">
                         <rating [(ngModel)]="card.evaluation" [max]="max" [readonly]="isReadonly"
-                            (onHover)="hoveringOver($event)" (onLeave)="resetStar()" (click)="add()" [titles]="['one','two','three']">
+                            (onLeave)="resetStar()" (click)="add(card.evaluation)">
                         </rating>
                     </div>
                     <button type="button" class="btn btn-danger" (click)="isCollapsed[i] = !isCollapsed[i]"

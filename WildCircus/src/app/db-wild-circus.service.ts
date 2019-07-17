@@ -22,4 +22,12 @@ export class DbWildCircusService {
     return this.http.get<Reservation[]>(`${this.url}/reservations`);
   }
 
+  postReservation(postData: Reservation) {
+    return this.http.post(`${this.url}/reservations`, postData).toPromise().then(data => console.log(data));
+  }
+
+  deleteReservation() {
+    // return this.http.delete(`${this.url}/reservations`)
+  }
+
 }
