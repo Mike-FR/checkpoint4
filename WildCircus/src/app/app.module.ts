@@ -12,7 +12,7 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DbWildCircusService } from './db-wild-circus.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     AlertModule.forRoot(),
     CollapseModule.forRoot(),
     RatingModule.forRoot(),

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Reservation } from '../models/reservation.model';
 import { DbWildCircusService } from '../db-wild-circus.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Artist } from '../models/artists.model';
 
 @Component({
   selector: 'app-adminpage',
@@ -10,13 +12,21 @@ import { DbWildCircusService } from '../db-wild-circus.service';
 export class AdminpageComponent implements OnInit {
 
   reservationData: Reservation[];
+  artistForm: FormGroup;
 
-  constructor(private dataService: DbWildCircusService) { }
+  constructor(private dataService: DbWildCircusService,
+              private fb: FormBuilder) { }
 
   ngOnInit() {
     this.dataService.getClients().subscribe(reservation => {
       this.reservationData = reservation;
       console.log(this.reservationData);
+    });
+
+    this.artistForm = this.fb.group({
+      nom : [''],
+      description: [''],
+      image: [''],
     });
   }
 
@@ -33,4 +43,7 @@ export class AdminpageComponent implements OnInit {
     }
   }
 
+  addArtist() {
+    this.dataService.postArtist(this.artistForm.value).subscribe()
+  }
 }

@@ -1,7 +1,7 @@
 export class Artist {
-    constructor(public id: number,
-                public nom: string,
+    constructor(public nom: string,
                 public description: string,
                 public image: string,
-                public evaluation: number) { }
+                public evaluation?: number,
+                public id?: number) { }
 }

@@ -23,3 +23,26 @@
         </tbody>
     </table>
 </div>
+
+<hr>
+
+<h1 class="text-uppercase text-center my-5">Ajouter un artiste</h1>
+
+<div class="formulaire">
+    <form [formGroup]="artistForm" (ngSubmit)="addArtist()" class="my-5">
+        <div class="form-group">
+            <label for="name">Nom de l'artiste</label>
+            <input formControlName="nom" type="text" class="form-control" id="name" placeholder="Entre le nom">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input formControlName="description" type="textarea" class="form-control" id="description" placeholder="Rédiger une courte description">
+        </div>
+        <div class="form-group">
+            <label for="image">Image d'illustration</label>
+            <input formControlName="image" type="text" class="form-control" id="image" placeholder="Insérer le lien d'une image">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+</div>
